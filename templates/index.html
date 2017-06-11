@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+    <!-- Container-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Welcome</h3>
+                </div>
+                
+                <form id="input-file" action="{{ url_for('dashboard') }}"  method=POST enctype=multipart/form-data>
+                    <p>Get a backup of your SMS by running the app - <a href="https://play.google.com/store/apps/details?id=net.ugorji.android.conversationbackup">Conversation Backup</a> on your Android phone</p>
+                    <p>This will give you a zip file. Unzip it and look for a JSON file by name - acb_messages.js</p>
+                    <p> Select the acb_messages.js file from your computer:</p>
+                    <input type="file" name="file">
+                    <br/><br/>
+                    <input type="submit"  class="btn btn-primary" value="Submit">
+                    {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                            <span style="color: #FF0000;">{{ messages[0] }}</li>
+                      {% endif %}
+                    {% endwith %}
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

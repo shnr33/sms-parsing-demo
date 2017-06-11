@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>ELE-CC-DARSHAN</title>
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/footable.bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" type="text/css" href="../static/css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Loading Javascript files -->
+    <!-- Latest compiled and minified jQuery JS -->
+    <script type=text/javascript src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <!-- Latest compiled and minified Bootstrap JS -->
+    <script type=text/javascript src="{{url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script type=text/javascript src="{{url_for('static', filename='js/footable.min.js') }}"></script>
+    <!-- App related Javascript -->
+    <script type=text/javascript src="{{url_for('static', filename='js/app.js') }}"></script>
+</body>
+</head>
+<body>
+    <div id="container">
+        <h1 class="common-title">SMS Sender Analytics</h1>
+        {% block body %}{% endblock %}
+    </div>
+</html>

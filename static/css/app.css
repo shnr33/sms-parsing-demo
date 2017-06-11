@@ -1,0 +1,41 @@
+#container { 
+    max-width: 70%; 
+    margin: 0 auto; 
+}
+
+.common-title { text-align: center; }
+
+.panel { margin: 10px; }
+
+form#input-file { padding: 10px; }
+
+#msg-display {
+    cursor: pointer;
+    /*display: none;*/
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    min-height: 50px;
+    left: 0px;
+    right: 0px;
+    margin: 5px 400px;
+    z-index: 1000000;
+    background: rgb(197, 201, 197);
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 2px rgb(138, 127, 127);
+}
+
+#msg-display.error { color: red; }
+#msg-display.success { color: green; }
+
+.modal-section-head {
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #f7f7f7, #f1f1f1);
+    background-image: -moz-linear-gradient(top, #f7f7f7, #f1f1f1);
+    background-image: -webkit-linear-gradient(top, #f7f7f7, #f1f1f1);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f7f7), to(#f1f1f1));
+    background-image: -o-linear-gradient(top, #f7f7f7, #f1f1f1);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7f7f7', endColorstr='#fff1f1f1', GradientType=0);
+}

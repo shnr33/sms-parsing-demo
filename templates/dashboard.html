@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+ 
+{% block body %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        showDashboardTable({{parsed_sms_data|tojson|safe}})
+    })
+</script>
+    <button type="button" class="btn btn-default btn-sm" onclick="location.href='{{url_for('index')}}';">
+      <span class="glyphicon glyphicon-home"></span> Home
+    </button>
+<table class="table" data-paging="true" data-sorting="true" data-filtering="true"></table>
+<div id="detailsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="detailsModalLabel">SMS Details</h3>
+        </div>
+        <div class="modal-body">
+            <div id="senderDetails" style="margin-bottom: 10px">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
